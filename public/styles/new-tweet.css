@@ -1,0 +1,30 @@
+.new-tweet {
+}
+label {
+  display: block;
+}
+
+.new-tweet textarea {
+  display: block;
+  background: none;
+  width: 100%;
+  border: none;
+  border-bottom: solid 5px #999;
+}
+
+.new-tweet form footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.new-tweet form footer button {
+  background-color: #0e3b82;
+  color: #fff;
+}
+
+.new-tweet form footer output {
+  color: #555;
+  font-family: "Bungee", cursive;
+  font-size: 1.5rem;
+}

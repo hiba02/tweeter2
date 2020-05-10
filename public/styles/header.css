@@ -1,8 +1,3 @@
-body {
-  background-image: url("../images/crossword.png");
-  background-color: #f7f5eb;
-}
-
 header {
   height: 400px;
   width: 100%;
@@ -12,7 +7,4 @@ header {
   align-items: center;
   flex-direction: column;
   top: 120px;
-}
-header div {
-  display: block;
 }

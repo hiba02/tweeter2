@@ -18,12 +18,21 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  /* background-color: #f4f1ec; */
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
   height: 100vh;
+  background-image: url("../images/crossword.png");
+  background-color: #f7f5eb;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+main {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+}
