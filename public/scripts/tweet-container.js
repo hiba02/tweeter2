@@ -9,7 +9,8 @@ $(document).ready(function() {
       .css("color", "#222");
     $(this)
       .find("#header-name")
-      .text("@Sirlsaac")
+      // .text("@Sirlsaac")
+      .css({ opacity: 1 })
       .css("color", "#666")
       .css("font-size", "2rem");
   });
@@ -17,7 +18,8 @@ $(document).ready(function() {
     console.log(this);
     $(this)
       .find("#header-name")
-      .text("");
+      // .css("");
+      .css({ opacity: 0 });
     $(this)
       .find(".tweet-container-content")
       .css("color", "#aaa");

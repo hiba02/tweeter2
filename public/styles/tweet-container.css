@@ -1,6 +1,6 @@
 .tweet-container {
   width: 100%;
-  height: 250px;
+  height: 300px;
   border: solid 5px #888;
   margin: 50px 0;
 }
@@ -9,14 +9,38 @@
 }
 .tweet-container-head {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  align-items: center;
   margin: 20px;
   color: #ccc;
+  width: 96%;
 }
 
-.tweet-container-head .header-name {
+.tweet-container-head span {
+  text-align: center;
+  align-items: center;
+}
+
+.tweet-container-head .head1 {
+  flex: 1;
+}
+
+.tweet-container-head .head2 {
+  flex: 1;
+}
+
+.tweet-container-head .head3 {
+  flex: 11;
+}
+
+.tweet-container-head .head4 {
+  flex: 1;
+}
+#header-name {
   /* display: none; */
   font-size: 2.5rem;
+  opacity: 0;
+  /* align-items: center; */
 }
 
 .tweet-container .tweet-container-content {
@@ -33,6 +57,7 @@
   width: 95%;
   margin: 0 auto;
   margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   color: #ccc;
