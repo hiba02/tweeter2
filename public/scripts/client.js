@@ -63,7 +63,7 @@ const createTweetElement = tw => {
       <span class="head4" id="header-name">${tw["user"].handle}</span>
     </div>
     <div class="tweet-container-content">
-      ${tw["content"].text}
+      ${sanitzieText(tw["content"].text)}
     </div>
     <footer>
       <span>10 days ago</span>
@@ -126,11 +126,18 @@ const validationText = text => {
   }
 };
 
+const sanitzieText = text => {
+  let $sp = document.createElement("span");
+  $sp.appendChild(document.createTextNode(text));
+  return $sp.innerHTML;
+};
+
 $(document).ready(function() {
   // sending data to server by ajax
   $("#formSubmit").on("submit", function(event) {
     event.preventDefault();
-    let textAreaContent = $("textarea").val();
+    let textAreaContent = sanitzieText($("textarea").val());
+    // const $newText = textAreaContent.text()
     console.log("textAreaContent length: ", textAreaContent.length);
 
     if (textAreaContent.length === 0) {
