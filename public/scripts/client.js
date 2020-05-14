@@ -46,7 +46,7 @@
 const renderTweets = function(tweets) {
   // loops through tweets
   $.each(tweets, function(index, articleObj) {
-    $(".tweets-container").append(createTweetElement(articleObj));
+    $(".tweets-container").prepend(createTweetElement(articleObj));
   });
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
@@ -85,6 +85,7 @@ const loadTweets = () => {
   });
 };
 
+// ???? it did not work
 const containerEffect = () => {
   $(".tweet-container").mouseover(function() {
     console.log(this);
@@ -116,11 +117,33 @@ const containerEffect = () => {
   });
 };
 
+const validationText = text => {
+  if (text.length === 0) {
+    $("#warning").html("<h2>Try again</h2>");
+    return;
+  } else {
+    return text;
+  }
+};
+
 $(document).ready(function() {
   // sending data to server by ajax
   $("#formSubmit").on("submit", function(event) {
     event.preventDefault();
+    let textAreaContent = $("textarea").val();
+    console.log("textAreaContent length: ", textAreaContent.length);
 
+    if (textAreaContent.length === 0) {
+      $(".new-tweet p").slideUp();
+      return $(".new-tweet").prepend(
+        "<p class='caution'>Please type any content before pushing tweet button.</p>"
+      );
+    } else if (textAreaContent.length > 140) {
+      $(".new-tweet p").slideUp();
+      return $(".new-tweet").prepend(
+        "<p class='caution'>Your tweet content is too long. Please type less than 140 characters. Click 'Write a new tweet' (arrow) button again.</p>"
+      );
+    }
     $.ajax({
       url: "http://localhost:8080/tweets",
       type: "post",
@@ -134,6 +157,9 @@ $(document).ready(function() {
     $(".tweets-container").html("");
     containerEffect();
     loadTweets();
+    // empty text area
+    $("textarea").val("");
+    $("textarea").focus();
   });
   containerEffect();
   loadTweets();
