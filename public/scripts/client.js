@@ -131,5 +131,5 @@ $(document).ready(function() {
   });
   containerEffect();
   loadTweets();
-  // renderTweets(tweetData);
+  $(".new-tweet").hide();
 });
