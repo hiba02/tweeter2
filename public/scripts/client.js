@@ -48,7 +48,7 @@ const loadTweets = () => {
 // #w4d3 jquery quiz #5
 const containerEffect = () => {
   $("body").on("mouseover", ".tweet-container", function() {
-    console.log(this);
+    // console.log(this);
     $(this)
       .find(".tweet-container-content")
       .css("color", "#222");
@@ -63,7 +63,7 @@ const containerEffect = () => {
       .css("font-size", "2rem");
   });
   $("body").on("mouseleave", ".tweet-container", function() {
-    console.log(this);
+    // console.log(this);
     $(this)
       .find("#header-name")
       // .css("");

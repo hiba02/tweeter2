@@ -1,0 +1,13 @@
+.arrow {
+  display: flex;
+  justify-content: flex-end;
+}
+.arrow img {
+  width: 120px;
+  height: 120px;
+  /* background-color: #333; */
+  color: red;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
