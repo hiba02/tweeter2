@@ -4,52 +4,11 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from initial-tweets.json
-// const tweetData = [
-//   {
-//     user: {
-//       name: "Newton",
-//       avatars: "https://i.imgur.com/73hZDYK.png",
-//       handle: "@SirIsaac"
-//     },
-//     content: {
-//       text:
-//         "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     created_at: 1461116232227
-//   },
-//   {
-//     user: {
-//       name: "Descartes",
-//       avatars: "https://i.imgur.com/nlhLi3I.png",
-//       handle: "@rd"
-//     },
-//     content: {
-//       text: "Je pense , donc je suis"
-//     },
-//     created_at: 1461113959088
-//   }
-// ];
-
-// const oneTweet = {
-//   user: {
-//     name: "Newton",
-//     avatars: "https://i.imgur.com/73hZDYK.png",
-//     handle: "@SirIsaac"
-//   },
-//   content: {
-//     text: "If I have seen further it is by standing on the shoulders of giants"
-//   },
-//   created_at: 1461116232227
-// };
-
 const renderTweets = function(tweets) {
   // loops through tweets
   $.each(tweets, function(index, articleObj) {
     $(".tweets-container").prepend(createTweetElement(articleObj));
   });
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
 };
 
 const createTweetElement = tw => {
@@ -85,9 +44,10 @@ const loadTweets = () => {
   });
 };
 
-// ???? it did not work
+// ???? it did not work -> change to body on event
+// #w4d3 jquery quiz #5
 const containerEffect = () => {
-  $(".tweet-container").mouseover(function() {
+  $("body").on("mouseover", ".tweet-container", function() {
     console.log(this);
     $(this)
       .find(".tweet-container-content")
@@ -102,7 +62,7 @@ const containerEffect = () => {
       .css("color", "#666")
       .css("font-size", "2rem");
   });
-  $(".tweet-container").mouseleave(function() {
+  $("body").on("mouseleave", ".tweet-container", function() {
     console.log(this);
     $(this)
       .find("#header-name")
@@ -167,6 +127,7 @@ $(document).ready(function() {
     // empty text area
     $("textarea").val("");
     $("textarea").focus();
+    $(".new-tweet p").hide();
   });
   containerEffect();
   loadTweets();

@@ -1,7 +1,7 @@
 $(document).ready(function() {
   let number = 140;
   $(".counter").text(number);
-  $("#tweet-text").keyup(function() {
+  $("#tweet-text").keypress(function() {
     console.log("sucess!!🤓");
     if (number <= 0) {
       number = number - 1;
