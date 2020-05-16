@@ -122,11 +122,14 @@ $(document).ready(function() {
     });
     //initialize tweet-container
     $(".tweets-container").html("");
-    containerEffect();
     loadTweets();
+    // containerEffect();
     // empty text area
     $("textarea").val("");
     $("textarea").focus();
+    $(".counter")
+      .text(140)
+      .css("color", "#555");
     $(".new-tweet p").hide();
   });
   containerEffect();
