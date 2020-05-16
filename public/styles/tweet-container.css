@@ -22,19 +22,19 @@
 }
 
 .tweet-container-head .head1 {
-  flex: 1;
+  flex: 1.2;
 }
 
 .tweet-container-head .head2 {
-  flex: 1;
+  flex: 2;
 }
 
 .tweet-container-head .head3 {
-  flex: 11;
+  flex: 9;
 }
 
 .tweet-container-head .head4 {
-  flex: 1;
+  flex: 3;
 }
 #header-name {
   /* display: none; */

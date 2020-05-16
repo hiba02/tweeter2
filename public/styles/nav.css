@@ -1,7 +1,7 @@
 nav {
   position: fixed;
   top: 0;
-  background: #4056a1;
+  background: url("../images/cream-dust.png"), #eba309;
   width: 100%;
   height: 120px;
   color: #fff;
@@ -46,5 +46,12 @@ nav div span #arrow {
   }
   100% {
     transform: translateY(20px);
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background: #4056a1;
   }
 }
