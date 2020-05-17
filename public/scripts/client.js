@@ -13,6 +13,7 @@ const renderTweets = function(tweets) {
 
 const createTweetElement = tw => {
   console.log(tw);
+
   const $tweet = $(`     
   <div class="tweet-container">
     <div class="tweet-container-head">
@@ -25,8 +26,8 @@ const createTweetElement = tw => {
       ${sanitzieText(tw["content"].text)}
     </div>
     <footer>
-      <span>10 days ago</span>
-      <span>icons</span>
+      <span>${tw["created_at"]}</span>
+      <span><i class="fa fa-flag" aria-hidden="true"></i>&nbsp;<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;<i class="fa fa-heart" aria-hidden="true"></i></span>
     </footer></div>`);
   return $tweet;
 };
