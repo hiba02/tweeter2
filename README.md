@@ -6,8 +6,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screen Shot of Final Product
 
-!["screenshot of tweet-destop"](https://github.com/hiba02/tweeter/blob/master/docs/tweet-destop.png?raw=true)
-!["screenshot of tweet-mobile"](https://github.com/hiba02/tweeter/blob/master/docs/tweet-destop.png?raw=true)
+!["screenshot of tweet-destop"](https://github.com/hiba02/tweeter2/blob/master/doc/screenshot_desktop.png?raw=true)
+!["screenshot of tweet-mobile"](https://github.com/hiba02/tweeter2/blob/master/doc/screenshot_mobile.png?raw=true)
 
 ## Getting Started
 
