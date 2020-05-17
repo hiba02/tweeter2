@@ -30,6 +30,12 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+@mixin verticallyAlign($align, $direction) {
+  justify-content: $align;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
 main {
   width: 90%;
   display: block;
@@ -44,9 +50,10 @@ header {
   width: 100%;
   /* position: relative; */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+  @include verticallyAlign(center, column);
   top: 120px;
   background: url("../images/cream-dust.png"), #eba309;
   margin-bottom: 150px;

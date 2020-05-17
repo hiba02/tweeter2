@@ -1,0 +1,83 @@
+@import "arrow.scss";
+@import "nav.scss";
+@import "new-tweet.scss";
+@import "tweet-container.scss";
+
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  color: #545149;
+  /* background-color: #f4f1ec; */
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  height: 100vh;
+  background-image: url("../images/crossword.png");
+  background-color: #f7f5eb;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+main {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 600px;
+}
+
+header {
+  position: fixed;
+
+  height: 400px;
+  width: 100%;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 120px;
+  background: url("../images/cream-dust.png"), #eba309;
+  margin-bottom: 150px;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  header {
+    position: relative;
+    display: block;
+    width: 38%;
+    float: left;
+    background: none;
+    text-align: center;
+  }
+  .header-box {
+    height: 500px;
+    width: 400px;
+    background: url("../images/cream-dust.png"), #eba309;
+    text-align: center;
+    margin: 100px auto;
+    padding: 50px 0;
+  }
+  main {
+    margin-top: 120px;
+    width: 58%;
+    float: left;
+  }
+}

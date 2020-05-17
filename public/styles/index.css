@@ -1,0 +1,250 @@
+.arrow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.arrow img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #0ef56e;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  background: url("../images/cream-dust.png"), #eba309;
+  width: 100%;
+  height: 120px;
+  color: #fff;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h3 {
+  display: inline-block;
+  font-family: "Bungee", cursive;
+  margin: 0 1.5rem;
+}
+nav div {
+  margin: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+nav div span {
+  font-weight: normal;
+}
+nav div span #arrow {
+  /* position: absolute; */
+  margin-top: 10px;
+  animation: arrow-updown ease-in-out 2s 100;
+  color: #f14f0f;
+}
+nav div .wring-strong {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+@keyframes arrow-updown {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background: #4056a1;
+  }
+}
+label {
+  display: block;
+}
+
+.new-tweet textarea {
+  display: block;
+  background: none;
+  width: 100%;
+  border: none;
+  border-bottom: solid 5px #999;
+}
+
+.new-tweet form footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.new-tweet form footer button {
+  background-color: #0e3b82;
+  color: #fff;
+}
+
+.new-tweet form footer output {
+  color: #555;
+  font-family: "Bungee", cursive;
+  font-size: 1.5rem;
+}
+
+.tweet-container {
+  width: 100%;
+  height: 300px;
+  border: solid 5px #888;
+  margin: 50px 0;
+}
+
+.tweet-container:hover {
+  box-shadow: 10px 10px 5px #336597;
+}
+
+.tweet-container-head {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin: 20px;
+  color: #ccc;
+  width: 96%;
+}
+
+.tweet-container-head span {
+  text-align: center;
+  align-items: center;
+}
+
+.tweet-container-head .head1 {
+  flex: 1.2;
+}
+
+.tweet-container-head .head2 {
+  flex: 2;
+}
+
+.tweet-container-head .head3 {
+  flex: 9;
+}
+
+.tweet-container-head .head4 {
+  flex: 3;
+}
+
+#header-name {
+  /* display: none; */
+  font-size: 2.5rem;
+  opacity: 0;
+  /* align-items: center; */
+}
+
+.tweet-container .tweet-container-content {
+  width: 95%;
+  border: none;
+  border-bottom: solid 5px #888;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 30px 0;
+  color: #ccc;
+}
+
+.tweet-container footer {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: #ccc;
+}
+
+.tweet-container footer span {
+  justify-content: space-between;
+}
+
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  /* background-color: #f4f1ec; */
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  height: 100vh;
+  background-image: url("../images/crossword.png");
+  background-color: #f7f5eb;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+main {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 600px;
+}
+
+header {
+  position: fixed;
+  height: 400px;
+  width: 100%;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 120px;
+  background: url("../images/cream-dust.png"), #eba309;
+  margin-bottom: 150px;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  header {
+    position: relative;
+    display: block;
+    width: 38%;
+    float: left;
+    background: none;
+    text-align: center;
+  }
+
+  .header-box {
+    height: 500px;
+    width: 400px;
+    background: url("../images/cream-dust.png"), #eba309;
+    text-align: center;
+    margin: 100px auto;
+    padding: 50px 0;
+  }
+
+  main {
+    margin-top: 120px;
+    width: 58%;
+    float: left;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -9,32 +9,30 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-nav h3 {
-  display: inline-block;
-  font-family: "Bungee", cursive;
-  margin: 0 1.5rem;
-}
-
-nav div {
-  margin: 0 1.5rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-nav div span {
-  font-weight: normal;
-}
-
-nav div .wring-strong {
-  font-family: sans-serif;
-  font-weight: bold;
-}
-nav div span #arrow {
-  /* position: absolute; */
-  margin-top: 10px;
-  animation: arrow-updown ease-in-out 2s 100;
-  color: #f14f0f;
+  h3 {
+    display: inline-block;
+    font-family: "Bungee", cursive;
+    margin: 0 1.5rem;
+  }
+  div {
+    margin: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    span {
+      font-weight: normal;
+      #arrow {
+        /* position: absolute; */
+        margin-top: 10px;
+        animation: arrow-updown ease-in-out 2s 100;
+        color: #f14f0f;
+      }
+    }
+    .wring-strong {
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+  }
 }
 
 @keyframes arrow-updown {
